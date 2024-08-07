@@ -1,0 +1,209 @@
+.main-screen {
+  padding: 20px;
+  background-color: #e2eafc;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: calc(100vh - 90px);
+  margin-top: 50px;
+
+  .add-task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    gap: 10px;
+    width: 100%;
+    border: 1px solid #ccdbfd;
+    padding: 5px;
+    background-color: #d7e3fc;
+    border-radius: 5px;
+
+    input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #abc4ff;
+      border-radius: 4px;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.3s;
+      color: #0056b3;
+      font-weight: bold;
+      background-color: #e2eafc;
+
+      &:focus {
+        border-color: #0056b3;
+      }
+
+      &::placeholder {
+        color: #0056b3;
+        font-weight: 500;
+      }
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      background-color: #0056b3;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #abc4ff;
+        color: #0056b3;
+        border: 1px solid #0056b3;
+        padding: 9px 19px;
+      }
+    }
+  }
+
+  .error-message {
+    color: red;
+    font-weight: bold;
+    padding: 0 5px;
+    margin: 10px 0 0;
+    width: 100%;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    background-color: #e2eafc;
+  }
+
+  .task-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid #ccdbfd;
+    padding: 5px;
+    background-color: #d7e3fc;
+    border-radius: 5px;
+
+    .task-item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 15px;
+      border: 1px solid #0056b3;
+      width: 100%;
+      height: 55px;
+      background-color: #edf2fb;
+      margin-bottom: 10px;
+      position: relative;
+
+      &:hover,
+      &:hover span,
+      &:hover .icons {
+        background-color: #e9ecef;
+      }
+
+      input[type='checkbox'] {
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      span {
+        font-size: 18px;
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #edf2fb;
+        color: #0056b3;
+        font-weight: 600;
+      }
+
+      .icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 18px;
+        color: #0056b3;
+
+        .icon {
+          margin-left: 10px;
+          cursor: pointer;
+          transition: color 0.3s;
+
+          &:hover {
+            color: #abc4ff;
+          }
+        }
+      }
+    }
+
+    .completed {
+      span {
+        text-decoration: line-through;
+        opacity: 0.4;
+      }
+    }
+
+    .editing {
+      opacity: 0.7;
+      border-color: #0056b3;
+    }
+  }
+
+  .no-tasks-message {
+    font-size: 25px;
+    color: #227c9d;
+    padding: 20px;
+    text-align: center;
+    background-color: #e2eafc;
+    border-radius: 5px;
+    margin-top: 15%;
+    p {
+      background-color: #e2eafc;
+      i {
+        background-color: #e2eafc;
+      }
+    }
+  }
+
+  .filter-tasks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    gap: 10px;
+    width: 100%;
+    padding: 5px 0 5px 10px;
+    margin-top: 20px;
+    background-color: #d7e3fc;
+    border-radius: 5px;
+    border: 1px solid #ccdbfd;
+
+    label {
+      font-size: 16px;
+      font-weight: bold;
+      color: #0056b3;
+      background-color: #d7e3fc;
+    }
+
+    select {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #abc4ff;
+      border-radius: 4px;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.3s;
+      color: #0056b3;
+      font-weight: bold;
+      background-color: #e2eafc;
+
+      &:focus {
+        border-color: #0056b3;
+      }
+    }
+  }
+}
