@@ -170,14 +170,18 @@ function MainScreen() {
             )}
           </div>
           {errorMessage && <div className="error-message">{errorMessage}</div>}
-          <div className="filter-tasks row">
-            <label className="col-2">Filter Tasks:</label>
-            <select onChange={handleFilterChange} value={filter} className="col-10">
-              <option value="all">All</option>
-              <option value="completed">Completed</option>
-              <option value="notCompleted">Not Completed</option>
-            </select>
-          </div>
+          
+          {tasks.length > 0 && (
+            <div className="filter-tasks row">
+              <label className="col-2">Filter Tasks:</label>
+              <select onChange={handleFilterChange} value={filter} className="col-10">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="notCompleted">Not Completed</option>
+              </select>
+            </div>
+          )}
+          
           {filteredTasks.length > 0 ? (
             <div className="task-list">
               {filteredTasks.map(task => (
